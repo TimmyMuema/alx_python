@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 for i in range(100):
-    print(f"{i:d} = {i:x}")
+    print(f"{i:d} = {i:02x}")
