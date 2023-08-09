@@ -1,9 +1,4 @@
-#!/usr/bin/python3
-def combinations(i, j):
-    if i < j:
-        return str(i) + str(j)
-    else:
-        return ''
+#!/usr/bin/env python3
 
-print(', '.join([combinations(i, j) for i in range(10) for j in range(10)]))
-
+combinations = [f'{i}{j}' for i in range(10) for j in range(i+1, 10)]
+print(', '.join(combinations))
