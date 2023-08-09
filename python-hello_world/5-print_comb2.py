@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
-
-numbers = [f'{i:02}' for i in range(100)]
+#!/usr/bin/python3
+numbers = ['{:02}'.format(i) for i in range(100)]
 print(', '.join(numbers))
