@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-combinations = []
-for i in range(10):
-    for j in range(i+1, 10):
-        combinations.append('{}{}'.format(i, j))
+def combinations(i, j):
+    if i < j:
+        return '{}{}'.format(i, j)
+    else:
+        return ''
 
-print(', '.join(combinations))
+print(', '.join([combinations(i, j) for i in range(10) for j in range(10)]))
