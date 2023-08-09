@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
-
-combinations = [f'{i}{j}' for i in range(10) for j in range(i+1, 10)]
+#!/usr/bin/python3
+combinations = ['{}{}'.format(a, z) for a in range(10) for z in range(10) if a < z]
 print(', '.join(combinations))
