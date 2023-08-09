@@ -1,4 +1,4 @@
-#!/usr/bin/python3
-for i in range(100):
-    print(f"{i:02}, ", end="")
-print()
+#!/usr/bin/env python3
+
+numbers = [f'{i:02}' for i in range(100)]
+print(', '.join(numbers))
