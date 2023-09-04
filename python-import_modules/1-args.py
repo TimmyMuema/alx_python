@@ -1,13 +1,16 @@
 import sys
 
-args = sys.argv[1:]
+def print_arguments():
+    """Prints the number of command-line arguments and their values."""
 
-if not args:
-    print("0 arguments.")
-elif len(args) == 1:
-    print("1 argument:")
-    print(args[0])
-else:
-    print("{} arguments:".format(len(args)))
-    for i, arg in enumerate(args, start=1):
-        print("{}: {}".format(i, arg))
+    argc = len(sys.argv[1:])
+
+    if argc == 0:
+        print("{} argument(s).\n".format(argc))
+    else:
+        print("{} argument(s):\n".format(argc))
+        for i, arg in enumerate(sys.argv[1:], start=1):
+            print("{}: {}".format(i, arg))
+
+if __name__ == "__main__":
+    print_arguments()
