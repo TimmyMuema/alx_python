@@ -1,8 +1,4 @@
-import importlib.machinery
-
+#!/usr/bin/python3
 if __name__ == "__main__":
-    loader = importlib.machinery.SourceFileLoader('variable_load_2', 'variable_load_2.py')
-    module = loader.load_module()
-    
-    a = module.a
+    from variable_load_2 import a
     print(a)
