@@ -1,2 +1,5 @@
 def is_prime(number):
-    return not any(number % i == 0 for i in range(2, int(number ** 0.5) + 1))
+    for i in range(3, number, 2):
+        if number % i == 0:
+            return False
+    return True
