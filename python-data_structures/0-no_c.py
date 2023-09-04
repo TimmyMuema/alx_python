@@ -1,10 +1,8 @@
-def add(a, b):
-    """Adds two numbers."""
-    return a + b
+def no_c(my_string):
+    """Removes all occurrences of the letter 'c' and 'C' from a string."""
 
-
-if __name__ == "__main__":
-    a = 1
-    b = 2
-    result = add(a, b)
-    print(f"{a} + {b} = {result}")
+    new_string = ''
+    for char in my_string:
+        if char not in 'cC':
+            new_string += char
+    return new_string
