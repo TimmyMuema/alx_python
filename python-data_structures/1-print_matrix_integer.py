@@ -1,16 +1,8 @@
 def print_matrix_integer(matrix=[[]]):
-    """Prints a matrix of integers."""
-
-    if not matrix:
-        print()
-        return
-
     for row in matrix:
-        for num in row:
-            print(f"{num:d}", end=" ")
+        for i, num in enumerate(row):
+            if i < len(row) - 1:
+                print("{:d} ".format(num), end="")
+            else:
+                print("{:d}".format(num), end="")
         print()
-
-
-matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-
-print_matrix_integer(matrix)
