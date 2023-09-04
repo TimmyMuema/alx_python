@@ -1,16 +1,16 @@
-import sys
+def print_matrix_integer(matrix=[[]]):
+    """Prints a matrix of integers."""
 
-def print_arguments():
-    """Prints the number of and the list of its arguments."""
-
-    argc = len(sys.argv) - 1
-
-    print("{} argument(s):\n".format(argc))
-    if argc == 0:
+    if not matrix:
+        print()
         return
 
-    for i in range(1, argc + 1):
-        print("{}: {}".format(i, sys.argv[i]))
+    for row in matrix:
+        for num in row:
+            print(f"{num:d}", end=" ")
+        print()
 
-if __name__ == "__main__":
-    print_arguments()
+
+matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+print_matrix_integer(matrix)
