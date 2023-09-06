@@ -1,15 +1,8 @@
-# Module documentation
-"""
-This module defines a Square class with a private size attribute.
-"""
+#!/usr/bin/python3
+"""Module documentation"""
 
-# Square class
 class Square:
-
-    # Private size attribute
-    __size = None
-
-    # Class constructor
+    """Square class with private size attribute"""
     def __init__(self, size):
-        # Set the size attribute
+        """Class constructor"""
         self.__size = size
