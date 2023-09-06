@@ -1,8 +1,42 @@
 def update_dictionary(a_dictionary, key, value):
+  """
+  Replaces or adds key/value in a dictionary.
+
+  Args:
+    a_dictionary: The dictionary to update.
+    key: The key to update or add.
+    value: The value to associate with the key.
+
+  Returns:
+    The updated dictionary.
+  """
+
+  if key in a_dictionary:
+    a_dictionary[key] = value
+  else:
     a_dictionary[key] = value
 
+  return a_dictionary
+
+
 def print_sorted_dictionary(my_dict):
-    if my_dict is not None:
-        keys = sorted(my_dict.keys())
-        for key in keys:
-            print("{}: {}".format(key, my_dict[key]))
+  """ Print sorted dictionary """
+  keys = sorted(my_dict.keys())
+  for k in keys:
+    print("{}: {}".format(k, my_dict[k]))
+
+
+a_dictionary = { 'language': "C", 'number': 89, 'track': "Low level" }
+new_dict = update_dictionary(a_dictionary, 'language', "Python")
+print_sorted_dictionary(new_dict)
+print("--")
+print_sorted_dictionary(a_dictionary)
+
+print("--")
+print("--")
+
+new_dict = update_dictionary(a_dictionary, 'city', "San Francisco")
+print_sorted_dictionary(new_dict)
+print("--")
+print_sorted_dictionary(a_dictionary)
+
