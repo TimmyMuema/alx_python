@@ -1,3 +1,4 @@
+"""Square Class"""
 from models.rectangle import Rectangle
 
 

@@ -1,3 +1,9 @@
+"""Base Module
+
+Defines the Base class for creating objects with unique IDs.
+"""
+
+
 class Base:
     """Base Class
 

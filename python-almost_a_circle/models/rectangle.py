@@ -1,3 +1,6 @@
+"""
+Rectangle Class Documentation
+"""
 from models.base import Base
 
 
